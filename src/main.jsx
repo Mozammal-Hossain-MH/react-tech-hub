@@ -38,22 +38,22 @@ const router = createBrowserRouter([
       {
         path: '/brand/:brandName',
         element: <SingleBrandProducts></SingleBrandProducts>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brandName}`)
+        loader: ({ params }) => fetch(`https://react-tech-hub-server.onrender.com/products/${params.brandName}`)
       },
       {
         path: '/brand/:brandName/:id',
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brandName}/${params.id}`)
+        loader: ({ params }) => fetch(`https://react-tech-hub-server.onrender.com/products/${params.brandName}/${params.id}`)
       },
       {
         path: '/cart',
         element: <PrivateRoute><Cart></Cart></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/cart-products')
+        loader: () => fetch('https://react-tech-hub-server.onrender.com/cart-products')
       },
       {
         path: '/update-product-data/:id',
         element: <PrivateRoute><UpdateProductData></UpdateProductData></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://react-tech-hub-server.onrender.com/products')
       }
     ]
   },

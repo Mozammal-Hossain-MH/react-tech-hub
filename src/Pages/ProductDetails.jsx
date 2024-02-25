@@ -12,7 +12,7 @@ const ProductDetails = () => {
     const [loadedCartProducts, setLoadedCartProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/cart-products')
+        fetch('https://react-tech-hub-server.onrender.com/cart-products')
             .then(res => res.json())
             .then(data => setLoadedCartProducts(data))
     }, [])
@@ -27,7 +27,7 @@ const ProductDetails = () => {
             toast('Product already added');
         }
         else {
-            fetch('http://localhost:5000/cart-products', {
+            fetch('https://react-tech-hub-server.onrender.com/cart-products', {
                 method: 'POST',
                 headers: {
                     "content-type": "application/json"

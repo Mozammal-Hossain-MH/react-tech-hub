@@ -18,7 +18,7 @@ const AddProducts = () => {
 
         console.log(gadget);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://react-tech-hub-server.onrender.com/products', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"

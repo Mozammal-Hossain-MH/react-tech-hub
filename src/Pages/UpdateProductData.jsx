@@ -23,7 +23,7 @@ const UpdateProductData = () => {
         const description = form.get('description');
         const gadget = { name, brandName, type, imageURL, price, deletedPrice, rating, description };
 
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`https://react-tech-hub-server.onrender.com/products/${_id}`, {
             method: 'PUT',
             headers: {
                 "content-type": "application/json"

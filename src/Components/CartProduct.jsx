@@ -9,7 +9,7 @@ const cartProduct = ({cartProduct, cartProducts, setCartProducts}) => {
     const formattedTotal = new Intl.NumberFormat().format(totalPrice);
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/cart-products/${id}`, {
+        fetch(`https://react-tech-hub-server.onrender.com/cart-products/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

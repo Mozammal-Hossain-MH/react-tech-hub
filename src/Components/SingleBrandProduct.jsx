@@ -17,7 +17,7 @@ const SingleBrandProduct = ({ product }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/products/${id}`, {
+                fetch(`https://react-tech-hub-server.onrender.com/products/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
